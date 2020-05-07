@@ -20,7 +20,7 @@ xxx
 ## 算法
 xxx
 ## 项目负责人
-@LMB171004 <br>
-@Lan10o0 <br>
-@aliu123aliu <br>
-@XUETING-LI <br>
+[@LMB171004](https://github.com/LMB171004)  <br>
+[@Lan10o0](https://github.com/Lan10o0)  <br>
+[@aliu123aliu](https://github.com/aliu123aliu)  <br>
+[@XUETING-LI](https://github.com/XUETING-LI)  <br>
