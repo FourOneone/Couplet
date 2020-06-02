@@ -20,6 +20,7 @@
 春风袭来秋意浓        秋风吹落柳花香<br>
 事事如意大吉祥       人间有意乐新春<br>
 天时，地利           人富，国昌<br>
+![image](https://github.com/FourOneone/Couplet/example1.png)
 ## 项目负责人
 [@LMB171004](https://github.com/LMB171004)  <br>
 [@Lan10o0](https://github.com/Lan10o0)  <br>
