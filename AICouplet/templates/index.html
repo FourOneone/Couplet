@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+	<head>
+        <meta charset="UTF-8">
+		<title>对对联</title>
+		<link href="../static/css/index.css" rel="stylesheet" type="text/css"/>
+	</head>
+    <script language="javascript">
+        function check(){
+            var mycouplet = document.getElementById("mycouplet").value;
+            var pattern = new RegExp("[`~!@#$^&*()=|{}':;',\\[\\].<>/?~！@#￥……&*（）——|{}【】‘；：”“'。、？]");
+            if (mycouplet == null || mycouplet.length < 4 || mycouplet.length > 12)
+            {
+                alert("您的输入长度非法，请重新输入！");
+                return false;
+            }
+            else if(mycouplet.search(/[0-9a-z]/i) != -1 || pattern.test(mycouplet))
+            {
+                alert("您的输入包含非法字符，请重新输入！");
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+    </script>
+	<body>
+    <form action="http://localhost:5000/test" method="post" onsubmit="return check()">
+	<div id="app">
+        <div class="header">
+            <h1 class="title">对对联</h1>
+            <p class="desc">提示：不支持繁体字和特殊字符，断句请用全角逗号分隔。</p>
+            <div class="couplet-button_group">
+                <input type="text" title="输入上联" class="couplet-input" placeholder="请输入上联" id="mycouplet" name="mycouplet" >
+                <!--<textarea id="mycouplet" name="mycouplet" class="couplet-input" placeholder="请输入上联" >{{user}}</textarea>-->
+                <button type="submit" class="couplet-btn"></button>
+            </div>
+        </div>
+        <div class="content">
+            <div id="loading" v-if="loading"></div>
+            <div class="couplet-text couplet-text_up">
+                <div class="couplet-hd"></div>
+                <p><font style="font-family:黑体" size="10">{{user_couplet}}</font></p>
+                <div class="couplet-bd" v-html="in_html"></div>
+            </div>
+            <div class="couplet-text couplet-text_down">
+                <div class="couplet-hd1"></div>
+                <p><font style="font-family:黑体" size="10">{{output_couplet}}</font></p>
+                <div class="couplet-bd" v-html="out_html" v-show="output"></div>
+            </div>
+        </div>
+	</div>
+    </form>
+	</body>
+</html>
+	
